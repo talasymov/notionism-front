@@ -1,0 +1,9 @@
+.blog-page {
+  &__bg-light {
+    position: absolute;
+    left: -110%;
+    top: -160%;
+    pointer-events: none;
+    z-index: -1;
+  }
+}

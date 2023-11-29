@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .my-button {
+        position: relative;
+
+        @apply
+        flex
+        items-center
+        font-bold
+        px-8
+        py-4
+        gap-2
+        rounded-xl
+        hover:translate-y-[-3px]
+        active:translate-y-[0]
+        transition
+    }
+
+    .my-button.my-button--bordered {
+        @apply
+        border-2
+        border-gray-200
+    }
+
+    .my-button.my-button--primary {
+        box-shadow: 0 5px 30px -20px transparent;
+        transition: box-shadow 500ms ease-in-out, transform 150ms ease-in-out;
+        @apply
+        bg-rose-500
+        text-white
+        border-0
+    }
+
+    .my-button.my-button--primary:hover {
+        box-shadow: 0 20px 30px -10px rgba(255, 36, 83, 0.36);
+    }
+    .my-button.my-button--primary:active{
+        box-shadow: 0 10px 30px -10px rgba(255, 36, 83, 0.36);
+    }
+
+    .my-button.my-button--md {
+        @apply
+        py-2
+        px-4
+        gap-1
+        font-semibold
+        text-base
+        rounded-lg
+    }
+
+    .my-button.my-button--lg {
+        @apply
+        py-3
+        px-7
+        gap-2
+        font-semibold
+        text-lg
+        rounded-lg
+    }
+
+    .my-button.my-button--block {
+        @apply
+        w-full
+        justify-center
+    }
+
+    .my-button--icon {
+        @apply
+        w-[56px]
+        h-[56px]
+        p-0
+        justify-center
+        items-center
+    }
+
+    .my-button--icon.my-button--md {
+        @apply
+        p-0
+        w-[40px]
+        h-[40px]
+    }
+
+    .my-button.loading {
+        pointer-events: none;
+    }
+}

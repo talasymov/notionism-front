@@ -1,0 +1,21 @@
+.blog-post-sidebar {
+  ol {
+    //list-style: decimal;
+    //margin-left: 20px;
+    //padding-left: 10px;
+
+    li {
+      padding: 5px 0;
+    }
+
+    ol {
+      //list-style: lower-alpha;
+      margin-left: 15px;
+
+      li:last-child {
+        padding-top: 5px;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

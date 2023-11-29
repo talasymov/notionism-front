@@ -1,0 +1,106 @@
+.home-page {
+  .empty-star-bg {
+    pointer-events: none;
+    position: absolute;
+    left: -100px;
+    top: 100px;
+  }
+
+  .bg-star {
+    pointer-events: none;
+    position: absolute;
+    right: -200px;
+    bottom: -120px;
+    animation: rotation 60s linear infinite;
+  }
+
+  .red-circle-bg {
+    pointer-events: none;
+    position: absolute;
+    right: -10%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+  }
+
+  .blue-yellow-bg {
+    pointer-events: none;
+    position: absolute;
+    right: -70%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .hero-image {
+    & .radial {
+      pointer-events: none;
+      position: absolute;
+      width: 563px;
+      height: 563px;
+      z-index: -1;
+      opacity: 0.4;
+
+      &--red {
+        left: -170px;
+        top: -80px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(225, 29, 72, 0.26) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      &--blue {
+        left: 70px;
+        top: 120px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(138, 199, 255, 0.26) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+    }
+
+    & .after {
+      position: absolute;
+      left: 53%;
+      top: 22%;
+      transform: translate(-50%, -50%) rotate(5.08deg);
+      width: 347px;
+      height: 68px;
+      background: rgba(255, 255, 255, 0.13);
+      backdrop-filter: blur(8.5px);
+      border-radius: 16px;
+      z-index: 5;
+      transition: 550ms ease-in-out;
+      animation: float 10s ease-in-out infinite;
+
+      &:hover {
+        backdrop-filter: blur(1px);
+      }
+    }
+  }
+
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+      transform: translate(-50%, -50%) rotate(4.08deg);
+    }
+    25% {
+      box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.03);
+      transform: translate(-50%, calc(-50% - 10px)) rotate(2.08deg);
+    }
+    50% {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+      transform: translate(-50%, -50%) rotate(-2.08deg);
+    }
+    75% {
+      box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.03);
+      transform: translate(-50%, calc(-50% - 7px)) rotate(2.08deg);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+      transform: translate(-50%, -50%) rotate(4.08deg);
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
